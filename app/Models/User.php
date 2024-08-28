@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'birthday',
+        'id_role',
+        'id_gender',
     ];
 
     /**
@@ -42,4 +45,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getRole()
+    {
+        return $this->belongsTo("App\Models\Role", "role_id", "id");
+    }
 }
