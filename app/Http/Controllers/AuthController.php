@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\Gender;
+use App\Mail\RegistrationSuccess;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -97,7 +98,7 @@ class AuthController extends Controller
 
         if ($customers) {
             //redirect dengan pesan sukses
-            // Mail::to($customers->email)->send(new RegistrationSuccess($customers));
+            Mail::to($customers->email)->send(new RegistrationSuccess($customers));
             return redirect('/backend')->with('message', 'Data Berhasil Ditambahkan');
             session()->flash('success', 'Registrasi berhasil! Cek Email Anda');
         } else {

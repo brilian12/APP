@@ -22,8 +22,6 @@ class RegistrationSuccess extends Mailable
 
     public function build()
     {
-        return $this->from('aplikasiaims20@gmail.com')
-        ->subject('Selamat, Registrasi Anda Berhasil')
-        ->view('emails.registration-success');
+        return $this->view('mail.Sendemail');
     }
 }
