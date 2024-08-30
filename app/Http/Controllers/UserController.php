@@ -6,19 +6,18 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
-class ApprovalController extends Controller
+class UserController extends Controller
 {
     public function index()
     {
-        $customers = User::where('id_role', 3)->get();
-        
+        $customers = User::where('id_role', 4)->get();
 
         $data = [
             'customers' => $customers,
         ];
 
         // mengirim data pegawai ke view index
-        return view("/backend/approval", $data);
+        return view("/backend/users", $data);
     }
 
     public function edit(Request $request)
@@ -28,7 +27,7 @@ class ApprovalController extends Controller
             "customers" => User::where("id", $request->id)->first()
         ];
 
-        return view('/backend/approval/update', $data);
+        return view('/backend/user/update', $data);
     }
 
     public function update(Request $request)
@@ -46,7 +45,7 @@ class ApprovalController extends Controller
             "birthday" => $request->birthday,
         ]);
 
-        return redirect('/backend/approval')->with('message', 'Data Berhasil Diubah');
+        return redirect('/backend/users')->with('message', 'Data Berhasil Diubah');
     }
 
     public function delete($id)
@@ -54,6 +53,6 @@ class ApprovalController extends Controller
         User::where("id", $id)->delete();
 
 
-        return redirect('/backend/approval')->with('message', 'Data Berhasil Dihapus');
+        return redirect('/backend/users')->with('message', 'Data Berhasil Dihapus');
     }
 }

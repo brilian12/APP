@@ -7,6 +7,7 @@ use App\Http\Controllers\TransController;
 use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\MailboxController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -87,10 +88,19 @@ Route::prefix('backend')->group(function () {
 
     //Approval
     Route::get('/approval', [ApprovalController::class, "index"]);
-
+    Route::get("/updateapproval/{id}", [ApprovalController::class, "edit"]);
+    Route::post("/updateapp", [ApprovalController::class, "update"]);
+    Route::get("deleteapp/{id}", [ApprovalController::class, "delete"]);
     //Operator
     Route::get('/operator', [OperatorController::class, "index"]);
-
+    Route::get("/updateoperator/{id}", [OperatorController::class, "edit"]);
+    Route::post("/updateop", [OperatorController::class, "update"]);
+    Route::get("deleteop/{id}", [OperatorController::class, "delete"]);
+    //User
+    Route::get('/users', [UserController::class, "index"]);
+    Route::get("/updateusers/{id}", [UserController::class, "edit"]);
+    Route::post("/updateus", [UserController::class, "update"]);
+    Route::get("deleteus/{id}", [UserController::class, "delete"]);
     //Mailbox
     Route::get('/mailbox', [MailboxController::class, "index"]);
 

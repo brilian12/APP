@@ -10,7 +10,7 @@ class MailboxController extends Controller
 {
     public function index()
     {
-        $customers = User::where('id_role', 2)->get();
+        $customers = User::where('id_role', 4)->get();
         
 
         $data = [

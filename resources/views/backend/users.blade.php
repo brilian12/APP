@@ -2,14 +2,14 @@
     <div class="row">
         <div class="card-header">
             <a class="text-decoration-none" href="{{ url('/backend/insertcustomer') }}">
-                <p class="text-primary m-0 fw-bold"></p><button class="btn btn-primary" type="button">Add Approval
+                <p class="text-primary m-0 fw-bold"></p><button class="btn btn-primary" type="button">Add User
                     +</button>
             </a>
         </div>
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Approval</h3>
+                    <h3 class="card-title">User</h3>
                     <div class="card-tools">
                         <form action="/backend/custsearch" method="GET">
                             <div class="input-group input-group-sm" style="width: 150px;">
@@ -43,10 +43,10 @@
                                 <td>{{ $p->name }}</td>
                                 <td>{{ $p->email }}</td>
                                 <td>
-                                    <a href="{{ url('/backend/updateapproval/' . $p->id) }}"><i class="far fa-edit"
+                                    <a href="{{ url('/backend/updateusers/' . $p->id) }}"><i class="far fa-edit"
                                             data-bss-hover-animate="pulse"
                                             style="font-size: 25px;margin-right: 5px;margin-left: 5px;color: rgb(52,82,241);"></i></a>
-                                    <a href="{{ url('/backend/deleteapp/' . $p->id) }}"><i class="far fa-trash-alt"
+                                    <a href="{{ url('/backend/deleteus/' . $p->id) }}"><i class="far fa-trash-alt"
                                             data-bss-hover-animate="pulse"
                                             style="font-size: 25px;margin-right: 0px;margin-left: 5px;color: rgb(255,5,5);"></i></a>
                                 </td>

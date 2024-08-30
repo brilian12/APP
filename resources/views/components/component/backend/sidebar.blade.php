@@ -47,10 +47,10 @@
                         </p>
                     </a>
                 <li class="nav-item">
-                    <a href="{{ url('/backend/widget') }}" class="nav-link">
+                    <a href="{{ url('/backend/users') }}" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                            Admin
+                            User
                             {{-- <span class="right badge badge-danger">New</span> --}}
                         </p>
                     </a>

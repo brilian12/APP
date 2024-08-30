@@ -43,13 +43,10 @@
                                 <td>{{ $p->name }}</td>
                                 <td>{{ $p->email }}</td>
                                 <td>
-                                    <a href="{{ url('/backend/detailcust/' . $p->id) }}"><i class="far fa-address-card"
-                                            data-bss-hover-animate="pulse"
-                                            style="font-size: 25px;margin-right: 0px;margin-left: 5px;color: rgb(0,191,255);"></i></a>
-                                    <a href="{{ url('/backend/updatecustomer/' . $p->id) }}"><i class="far fa-edit"
+                                    <a href="{{ url('/backend/updateoperator/' . $p->id) }}"><i class="far fa-edit"
                                             data-bss-hover-animate="pulse"
                                             style="font-size: 25px;margin-right: 5px;margin-left: 5px;color: rgb(52,82,241);"></i></a>
-                                    <a href="{{ url('/backend/deletecust/' . $p->id) }}"><i class="far fa-trash-alt"
+                                    <a href="{{ url('/backend/deleteop/' . $p->id) }}"><i class="far fa-trash-alt"
                                             data-bss-hover-animate="pulse"
                                             style="font-size: 25px;margin-right: 0px;margin-left: 5px;color: rgb(255,5,5);"></i></a>
                                 </td>

@@ -25,5 +25,9 @@ class RoleSeeders extends Seeder
             "id" => 3,
             "role" => "approver",
         ]);
+        Role::create([
+            "id" => 4,
+            "role" => "user",
+        ]);
     }
 }
